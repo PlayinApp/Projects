@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Webmvc.Models.student>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="Scripts/js/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<h2>Index</h2>
+<script>
+    $(document).ready(function () {
+
+        alert("hi");
+
+
+            $.ajax({
+                url:  'http://192.168.0.102:8050/supervisor/Driver_List', //This works but property values are null 
+                type: 'POST',
+                data: JSON.stringify(d),
+                contentType: 'application/json; charset=utf-8',
+                success: function (response)
+                {
+                    
+                    alert(response.d);
+                }
+
+            });
+
+        });
+      
+       
+</script>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+       
+      
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StudentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StudentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StudentId })
+
+        </td>
+    </tr>
+}
+
+</table>
+
+
+

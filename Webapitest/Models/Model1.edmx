@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="vahiniModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="sp_driver" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="driverid" Type="int" Mode="In" />
+          <Parameter Name="name" Type="varchar" Mode="In" />
+          <Parameter Name="email" Type="varchar" Mode="In" />
+          <Parameter Name="age" Type="int" Mode="In" />
+          <Parameter Name="emergencyContact" Type="varchar" Mode="In" />
+          <Parameter Name="panno" Type="varchar" Mode="In" />
+          <Parameter Name="aadharno" Type="varchar" Mode="In" />
+          <Parameter Name="experience" Type="float" Mode="In" />
+          <Parameter Name="currentAddr" Type="varchar" Mode="In" />
+          <Parameter Name="permanentAaddr" Type="varchar" Mode="In" />
+          <Parameter Name="licenceno" Type="varchar" Mode="In" />
+          <Parameter Name="fromdateTodate" Type="varchar" Mode="In" />
+          <Parameter Name="transportCompany" Type="varchar" Mode="In" />
+          <Parameter Name="vehicleno" Type="varchar" Mode="In" />
+          <Parameter Name="profilePic" Type="varchar" Mode="In" />
+          <Parameter Name="bloodGroup" Type="varchar" Mode="In" />
+          <Parameter Name="eyeSight" Type="varchar" Mode="In" />
+          <Parameter Name="breathTest" Type="varchar" Mode="In" />
+          <Parameter Name="lifeInsurance" Type="bit" Mode="In" />
+          <Parameter Name="isComsumeAlcohal" Type="bit" Mode="In" />
+          <Parameter Name="isSmoke" Type="bit" Mode="In" />
+          <Parameter Name="physicalInjuries" Type="varchar" Mode="In" />
+          <Parameter Name="otherhealthIssues" Type="varchar" Mode="In" />
+          <Parameter Name="driverDeviceid" Type="int" Mode="In" />
+          <Parameter Name="status" Type="bit" Mode="In" />
+          <Parameter Name="CreatedOn" Type="datetime" Mode="In" />
+          <Parameter Name="command" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="vahiniModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="vahiniModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="vahiniEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="sp_driver" ReturnType="Collection(vahiniModel.sp_driver_Result)">
+            <Parameter Name="driverid" Mode="In" Type="Int32" />
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="age" Mode="In" Type="Int32" />
+            <Parameter Name="emergencyContact" Mode="In" Type="String" />
+            <Parameter Name="panno" Mode="In" Type="String" />
+            <Parameter Name="aadharno" Mode="In" Type="String" />
+            <Parameter Name="experience" Mode="In" Type="Double" />
+            <Parameter Name="currentAddr" Mode="In" Type="String" />
+            <Parameter Name="permanentAaddr" Mode="In" Type="String" />
+            <Parameter Name="licenceno" Mode="In" Type="String" />
+            <Parameter Name="fromdateTodate" Mode="In" Type="String" />
+            <Parameter Name="transportCompany" Mode="In" Type="String" />
+            <Parameter Name="vehicleno" Mode="In" Type="String" />
+            <Parameter Name="profilePic" Mode="In" Type="String" />
+            <Parameter Name="bloodGroup" Mode="In" Type="String" />
+            <Parameter Name="eyeSight" Mode="In" Type="String" />
+            <Parameter Name="breathTest" Mode="In" Type="String" />
+            <Parameter Name="lifeInsurance" Mode="In" Type="Boolean" />
+            <Parameter Name="isComsumeAlcohal" Mode="In" Type="Boolean" />
+            <Parameter Name="isSmoke" Mode="In" Type="Boolean" />
+            <Parameter Name="physicalInjuries" Mode="In" Type="String" />
+            <Parameter Name="otherhealthIssues" Mode="In" Type="String" />
+            <Parameter Name="driverDeviceid" Mode="In" Type="Int32" />
+            <Parameter Name="status" Mode="In" Type="Boolean" />
+            <Parameter Name="CreatedOn" Mode="In" Type="DateTime" />
+            <Parameter Name="command" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="sp_driver_Result">
+          <Property Type="Int32" Name="driverid" Nullable="false" />
+          <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="email" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="age" Nullable="true" />
+          <Property Type="String" Name="emergencyContact" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="panno" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="aadharno" Nullable="true" MaxLength="50" />
+          <Property Type="Double" Name="experience" Nullable="true" />
+          <Property Type="String" Name="currentAddr" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="permanentAaddr" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="licenceno" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="fromdateTodate" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="transportCompany" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="vehicleno" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="profilePic" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="bloodGroup" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="eyeSight" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="breathTest" Nullable="true" MaxLength="100" />
+          <Property Type="Boolean" Name="lifeInsurance" Nullable="true" />
+          <Property Type="Boolean" Name="isComsumeAlcohal" Nullable="true" />
+          <Property Type="Boolean" Name="isSmoke" Nullable="true" />
+          <Property Type="String" Name="physicalInjuries" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="otherhealthIssues" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="driverDeviceid" Nullable="true" />
+          <Property Type="Boolean" Name="status" Nullable="true" />
+          <Property Type="DateTime" Name="createdOn" Nullable="true" Precision="23" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="vahiniModelStoreContainer" CdmEntityContainer="vahiniEntities" >
+          <FunctionImportMapping FunctionImportName="sp_driver" FunctionName="vahiniModel.Store.sp_driver">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="vahiniModel.sp_driver_Result">
+                <ScalarProperty Name="driverid" ColumnName="driverid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="emergencyContact" ColumnName="emergencyContact" />
+                <ScalarProperty Name="panno" ColumnName="panno" />
+                <ScalarProperty Name="aadharno" ColumnName="aadharno" />
+                <ScalarProperty Name="experience" ColumnName="experience" />
+                <ScalarProperty Name="currentAddr" ColumnName="currentAddr" />
+                <ScalarProperty Name="permanentAaddr" ColumnName="permanentAaddr" />
+                <ScalarProperty Name="licenceno" ColumnName="licenceno" />
+                <ScalarProperty Name="fromdateTodate" ColumnName="fromdateTodate" />
+                <ScalarProperty Name="transportCompany" ColumnName="transportCompany" />
+                <ScalarProperty Name="vehicleno" ColumnName="vehicleno" />
+                <ScalarProperty Name="profilePic" ColumnName="profilePic" />
+                <ScalarProperty Name="bloodGroup" ColumnName="bloodGroup" />
+                <ScalarProperty Name="eyeSight" ColumnName="eyeSight" />
+                <ScalarProperty Name="breathTest" ColumnName="breathTest" />
+                <ScalarProperty Name="lifeInsurance" ColumnName="lifeInsurance" />
+                <ScalarProperty Name="isComsumeAlcohal" ColumnName="isComsumeAlcohal" />
+                <ScalarProperty Name="isSmoke" ColumnName="isSmoke" />
+                <ScalarProperty Name="physicalInjuries" ColumnName="physicalInjuries" />
+                <ScalarProperty Name="otherhealthIssues" ColumnName="otherhealthIssues" />
+                <ScalarProperty Name="driverDeviceid" ColumnName="driverDeviceid" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
