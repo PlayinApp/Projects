@@ -19,8 +19,8 @@ namespace VaahiniAPI.Models
 
         public string token { get; set; }
        
-        public object userId { get; set; }
-        public object useridfk { get; set; }
+        public string userId { get; set; }
+        public int useridfk { get; set; }
         public string usertype { get; set; }
         public string authKey { get; set; }
         public string presentAddress { get; set; }

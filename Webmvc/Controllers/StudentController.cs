@@ -51,8 +51,9 @@ namespace Webmvc.Controllers
             string commandText = "EXEC [dbo].[sp_shifts] @shiftId,@shiftname, @command";
 
 
-           
-             var employees = db.Database.SqlQuery<Shift>(commandText, new SqlParameter("@shiftId", 1),
+
+
+            var employees = db.Database.SqlQuery<Shift>(commandText, new SqlParameter("@shiftId", 1),
                             new SqlParameter("@shiftname", "krishna"),
                             new SqlParameter("@command", "SELECTALL")).ToList();
 

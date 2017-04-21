@@ -75,7 +75,7 @@ namespace VaahiniAPI.Controllers
                 {
 
                     var resp = Request.CreateResponse<ResponseModel>(HttpStatusCode.OK,
-                      new ResponseModel() { message = "Already This Mobileno Registered", statuscode = Convert.ToInt16(HttpStatusCode.OK) }
+                      new ResponseModel() { message = "Already This Mobile no Registered", statuscode = Convert.ToInt16(HttpStatusCode.OK) }
                                                                       );
                     return resp;
 

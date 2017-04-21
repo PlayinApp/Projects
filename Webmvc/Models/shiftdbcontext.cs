@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using Webmvc.Models;
 
 namespace Webmvc.Models
 {
     public class shiftdbcontext : DbContext
     {
-        public DbSet shifts { get; set; }
+        public DbSet<Shift> shifts { get; set; }
 
         public shiftdbcontext()
              : base("ConnectionString")
                   {
 
         }
+
+
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
         //    modelBuilder.Entity<Shift>().MapToStoredProcedures(
