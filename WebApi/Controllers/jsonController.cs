@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebApi.Models;
 
 namespace WebApi.Controllers
 {
@@ -43,7 +44,13 @@ namespace WebApi.Controllers
 
         }
 
+        public void test() {
 
+
+            shiftdbcontext db = new shiftdbcontext();
+
+            db.SaveChanges();
+        }
 
     }
 }

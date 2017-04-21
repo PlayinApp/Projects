@@ -173,6 +173,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Shift.cs" />
+    <Compile Include="Models\shiftdbcontext.cs" />
     <Compile Include="Models\Tbl_Driver.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

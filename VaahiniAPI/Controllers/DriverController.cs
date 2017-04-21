@@ -97,7 +97,7 @@ namespace VaahiniAPI.Controllers
          */
 
 
-        [HttpGet]
+        [HttpPost]
         [Route("supervisor/Driver_List")]
         public HttpResponseMessage driverList()
         {

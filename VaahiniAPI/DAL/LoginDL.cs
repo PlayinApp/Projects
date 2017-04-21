@@ -251,7 +251,7 @@ namespace VaahiniAPI.DAL
              new SqlParameter("@Command","INSERT"),
              new SqlParameter("@deviceOs", Objlogin.deviceOs),
              new SqlParameter("@deviceOsVersion", Objlogin.deviceOsVersion),
-              new SqlParameter("@deviceOsVersion", Objlogin.deviceModel),
+              new SqlParameter("@deviceModel", Objlogin.deviceModel),
              new SqlParameter("@devicekey", Objlogin.devicekey),
               new SqlParameter("@userIdFK", Objlogin.useridFK),
              new SqlParameter("@status",1),

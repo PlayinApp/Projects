@@ -224,12 +224,8 @@ namespace VaahiniAPI.DAL
                 return Execution.ExecuteParamerizedSelectCommand("sp_driver", new SqlParameter[]
         {
 
-
-
                 new SqlParameter("@Command", "SELECTBYUSERID"),
-                  new SqlParameter("@useridPK", objdriverModel.userId)
-
-
+                new SqlParameter("@useridPK", objdriverModel.userId),
         });
             }
             catch (Exception ex)

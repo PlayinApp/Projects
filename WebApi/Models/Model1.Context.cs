@@ -25,6 +25,6 @@ namespace WebApi.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Tbl_Driver> Tbl_Driver1 { get; set; }
+        public virtual DbSet<Tbl_Driver> Tbl_Driver { get; set; }
     }
 }

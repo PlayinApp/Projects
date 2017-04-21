@@ -15,11 +15,11 @@ namespace WebApi.Controllers
         [System.Web.Http.HttpPost]
         public HttpResponseMessage Post()
         {
-            var msf = db.Tbl_Driver1.AsEnumerable();
+          //  var msf = db.Tbl_Driver1.AsEnumerable();
 
     var resp = Request.CreateResponse<LoginResponseModel>(
         HttpStatusCode.OK,
-        new LoginResponseModel() { Message ="success", Output =msf }
+        new LoginResponseModel() { Message ="success" }
     );
             return resp;
         }

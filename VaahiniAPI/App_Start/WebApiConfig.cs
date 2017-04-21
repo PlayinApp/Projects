@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
-using Newtonsoft.Json.Serialization;
+using WebApiContrib.Formatting.Jsonp;
 
 namespace VaahiniAPI
 {
@@ -25,6 +25,9 @@ namespace VaahiniAPI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            
+            //var Jsonformatter = new JsonpMediaTypeFormatter(config.Formatters.JsonFormatter);
+            //config.Formatters.Insert(0, Jsonformatter);
         }
     }
 }
