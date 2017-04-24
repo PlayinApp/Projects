@@ -57,15 +57,6 @@ namespace Webmvc.Controllers
                             new SqlParameter("@shiftname", "krishna"),
                             new SqlParameter("@command", "SELECTALL")).ToList();
 
-
-
-
-
-
-
-
-
-
             string shiftname2 = "testshift";
         //    string Command = "INSERT";
         //SqlParameter latParam = new SqlParameter("@shiftname", shiftname);
