@@ -51,7 +51,7 @@ namespace Webmvc.Models
                 var data = new
                 {
                     // to = YOUR_FCM_DEVICE_ID, // Uncoment this if you want to test for single device
-                     to = "cZUfb1WNSZU:APA91bFscuBAvbLALPQjIOMjj1wzjU0QGcfljoe2Wq45aXjF_aMo6FS_RVX_huaqfF-QoXVg1CA4rOzz9OfY9skkTpppo11tKQUFF41_BbaKQXsGE-lVv5JR4QMJnA6G2y5KlVDPUO0G", // this is for topic 
+                    to = "cZUfb1WNSZU:APA91bFscuBAvbLALPQjIOMjj1wzjU0QGcfljoe2Wq45aXjF_aMo6FS_RVX_huaqfF-QoXVg1CA4rOzz9OfY9skkTpppo11tKQUFF41_BbaKQXsGE-lVv5JR4QMJnA6G2y5KlVDPUO0G", // this is for topic 
                    
 
                     notification = new
