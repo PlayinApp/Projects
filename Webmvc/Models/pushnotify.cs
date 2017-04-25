@@ -28,6 +28,7 @@ namespace Webmvc.Models
             set;
         }
 
+
         public FCMPushNotification SendNotification(string _title, string _message, string _topic)
         {
             FCMPushNotification result = new FCMPushNotification();
@@ -60,8 +61,8 @@ namespace Webmvc.Models
                         title = _title,
                         body = _message,
                         sound = true,
-                        image = "http://api.androidhive.info/images/minion.jpg",
-                        color= "#228B22"
+                        image = "http://api.androidhive.info/images/minion.jpg"
+                       
 
 
                     }
