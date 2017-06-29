@@ -26,7 +26,7 @@ namespace VaahiniAPI.Controllers
         *                Register Driver Details
         *---------------------------------------------------------------
         */
-        [HttpPost]
+        [HttpPost] 
         [Route("supervisor/register_Driver")]
         public HttpResponseMessage registerDriver([FromBody]  DriverModel driverm)
         {
